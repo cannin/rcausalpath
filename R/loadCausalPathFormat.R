@@ -44,18 +44,20 @@ loadCausalPathFormat <- function(sif,formatFile,highlightNodes = NULL,formatConf
       hexColor <- do.call("rgb", as.list(t1))
       
       nodeColors <- c(nodeColors, hexColor)
-    } else if(exists("formatConfFile") && length(which(formatConf$V2==names(V(g)[i]) & formatConf$V3=="color"))>0){
-      idx <- which(formatConf$V2==names(V(g)[i]) & formatConf$V3=="color")
-      rgbTmp <- strsplit(formatConf$V4[idx], " ")[[1]]
-      
-      # Values must be between 0 and 1
-      t1 <- as.numeric(rgbTmp) / 255
-      hexColor <- do.call("rgb", as.list(t1))
-      
-      nodeColors <- c(nodeColors, hexColor)
-    }
-    else{
-      nodeColors <- c(nodeColors, "#FFFFFF")
+    } else if(!is.null(formatConfFile)){ 
+      if(length(which(formatConf$V2==names(V(g)[i]) & formatConf$V3=="color"))>0){
+        idx <- which(formatConf$V2==names(V(g)[i]) & formatConf$V3=="color")
+        rgbTmp <- strsplit(formatConf$V4[idx], " ")[[1]]
+        
+        # Values must be between 0 and 1
+        t1 <- as.numeric(rgbTmp) / 255
+        hexColor <- do.call("rgb", as.list(t1))
+        
+        nodeColors <- c(nodeColors, hexColor)
+      }
+      else{
+        nodeColors <- c(nodeColors, "#FFFFFF")
+      }
     }
   }
   
