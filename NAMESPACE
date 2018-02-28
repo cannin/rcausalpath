@@ -2,6 +2,7 @@
 
 export(generateCausalityGraph)
 export(generateCausalityIgraph)
+export(loadCausalPathFormat)
 export(parseCausalityToIgraph)
 export(skip_on_bioc)
 import(rJava)
