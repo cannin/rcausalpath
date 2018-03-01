@@ -2,10 +2,10 @@ Package: rcausalpath
 Type: Package
 Title: rcausalpath
 Version: 0.99.2
-Date: 2018-02-03
+Date: 2018-02-28
 Author: Augustin Luna, Ozgun Babur
 Maintainer: Augustin Luna <aluna@jimmy.harvard.edu>
-Description: TBA
+Description: Package with R helper (e.g. visualization using igraph) functions for the the CausalPath methodology (https://github.com/PathwayAndDataAnalysis/causalpath).
 License: LGPL-3
 LazyData: false
 Depends:
