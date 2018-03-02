@@ -62,6 +62,9 @@ loadCausalPathFormat <- function(sif,formatFile,highlightNodes = NULL,formatConf
         nodeColors <- c(nodeColors, "#FFFFFF")
       }
     }
+    else{
+      nodeColors <- c(nodeColors, "#FFFFFF")
+    }
   }
 
   # Assign to graph
