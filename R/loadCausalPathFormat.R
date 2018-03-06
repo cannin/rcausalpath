@@ -77,19 +77,19 @@ loadCausalPathFormat <- function(sif,formatFile,highlightNodes = NULL,formatConf
 
   for(idx in 1:length(E(g))){
     if(sif$INTERACTION_TYPE[idx]=="upregulates-expression"){
-      edgeLty <- c(edgeLty, 1)
+      edgeLty <- c(edgeLty, 2)
       edgeColors <- c(edgeColors, "#006400")
     }
     if(sif$INTERACTION_TYPE[idx]=="downregulates-expression"){
-      edgeLty <- c(edgeLty, 1)
+      edgeLty <- c(edgeLty, 2)
       edgeColors <- c(edgeColors, "#640000")
     }
     if(sif$INTERACTION_TYPE[idx]=="phosphorylates"){
-      edgeLty <- c(edgeLty, 2)
+      edgeLty <- c(edgeLty, 1)
       edgeColors <- c(edgeColors, "#006400")
     }
     if(sif$INTERACTION_TYPE[idx]=="dephosphorylates"){
-      edgeLty <- c(edgeLty, 2)
+      edgeLty <- c(edgeLty, 1)
       edgeColors <- c(edgeColors, "#640000")
     }
 
