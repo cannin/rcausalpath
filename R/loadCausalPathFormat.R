@@ -98,11 +98,11 @@ loadCausalPathFormat <- function(sif,formatFile,highlightNodes = NULL,formatConf
     # different colors than the causative network.
 
     if(sif$INTERACTION_TYPE[idx]=="upregulates-expression-conf"){
-      edgeLty <- c(edgeLty, 1)
+      edgeLty <- c(edgeLty, 2)
       edgeColors <- c(edgeColors, "#FF00FF")
     }
     if(sif$INTERACTION_TYPE[idx]=="downregulates-expression-conf"){
-      edgeLty <- c(edgeLty, 1)
+      edgeLty <- c(edgeLty, 2)
       edgeColors <- c(edgeColors, "#00FFFF")
     }
   }
