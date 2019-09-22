@@ -12,6 +12,7 @@
 #' @export
 #' 
 #' @importFrom paxtoolsr loadSifInIgraph
+#' @importFrom igraph V E 
 loadCausalPathFormat <- function(sif,formatFile,highlightNodes = NULL,formatConfFile = NULL) {
   require(paxtoolsr)
   require(igraph)

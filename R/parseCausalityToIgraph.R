@@ -5,6 +5,11 @@
 #' @return an igraph object
 #'
 #' @concept rcausalpath
+#' @export 
+#' 
+#' @importFrom igraph V
+#' @importFrom igraph set_vertex_attr
+#' @importFrom igraph E 
 parseCausalityToIgraph <- function(results) {
     sif <- results$sif
 

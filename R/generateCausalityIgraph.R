@@ -4,6 +4,10 @@
 #' @return igraph graph object
 #'
 #' @concept rcausalpath
+#' @export
+#' 
+#' @importFrom paxtoolsr loadSifInIgraph
+#' @importFrom igraph V E
 generateCausalityIgraph <- function(causalityResults) {
     # Load SIF
     sif <- causalityResults$sif
