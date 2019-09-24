@@ -15,6 +15,4 @@ igraph graph object
 \description{
 Generate igraph Graph from Causality Analysis Results
 }
-\concept{
-rcausalpath
-}
+\concept{rcausalpath}

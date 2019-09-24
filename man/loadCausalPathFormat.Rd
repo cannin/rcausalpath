@@ -12,7 +12,7 @@ loadCausalPathFormat(sif, formatFile, highlightNodes = NULL,
 
 \item{formatFile}{File path of the .format file with information about the colors of the nodes}
 
-\item{highlightNodes}{List of namesead  of nodes which are highlighted by a circle node instead of rectangles}
+\item{highlightNodes}{Vector containing names of nodes which are highlighted by a circle node instead of rectangles}
 
 \item{formatConfFile}{File path of .format file of conflicting network to plot merged network. Required for
 color of nodes which are only present in subnetwork which was added from the conflicting network.}
@@ -23,6 +23,4 @@ igraph graph object with adapted colors
 \description{
 Generate igraph Graph with node, edge colors and highlighted nodes.
 }
-\concept{
-rcausalpath
-}
+\concept{rcausalpath}
