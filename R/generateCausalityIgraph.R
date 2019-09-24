@@ -4,7 +4,6 @@
 #' @return igraph graph object
 #'
 #' @concept rcausalpath
-#' @export
 #' 
 #' @importFrom paxtoolsr loadSifInIgraph
 #' @importFrom igraph V E

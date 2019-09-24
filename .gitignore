@@ -2,3 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
+inst/.panda/
+inst/egfExampleOriginal/
+inst/java/causalpath_FIXME.jar
+inst/java/causalpath_18270kb.jar
+inst/java/causalpath_092419.jar
+inst/java/causalpath.jar
+inst/java/causalpath-1.0.0.jar
+inst/wikiExample/.panda/
+inst/egfExample2/
+inst/egfExample/.panda/

@@ -1,0 +1,11 @@
+Overall graph size pval = 0.0
+Gene	Downstream crowded pval	Downstream suggests activation pval	Downstream suggests inhibition pval
+EGF	0.003	0.001	1.0
+EGFR	0.001	0.001	1.0
+LCK	0.01	0.003	1.0
+FYN	0.005	0.028	0.087
+SYK	0.025	0.007	1.0
+MAPK14	0.46	0.332	1.0
+CDK1	1.0	1.0	1.0
+MAPK1	1.0	1.0	1.0
+MAPK3	1.0	1.0	1.0

@@ -22,7 +22,6 @@
 #'   directory will be created in. Pass null to use default.
 #'
 #' @concept rcausalpath
-#' @export 
 #' 
 #' @importFrom rJava .jcall .jnew .jcheck 
 generateCausalityGraph <- function(platformFile, idColumn = "NodeName", symbolsColumn = "Symbol", sitesColumn = "Sites",

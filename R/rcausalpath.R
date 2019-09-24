@@ -2,7 +2,7 @@
 
 #' @import rJava
 .onLoad <- function(lib, pkg) {
-    .jpackage(pkg, jars = c("causalpath.jar"))
+    .jpackage(pkg, jars = c("causalpath-1.2.0_5fa16018.jar"))
 
     # Taken from xlsxjars packages What's your java version?  Need >= 1.5.0.
     jversion <- .jcall("java.lang.System", "S", "getProperty", "java.version")
