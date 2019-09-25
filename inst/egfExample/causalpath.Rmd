@@ -29,9 +29,8 @@ This method generates causal explanations for proteomic profiles using prior mec
 
 # Run CausalPath
 ## Working directory 
-
-```{r, engine='bash'}
-pwd
+```{r}
+dir()
 ```
 
 ## Parameters 
@@ -46,8 +45,14 @@ cat dataset/parameters.txt
 
 CausalPath code available from: https://github.com/PathwayAndDataAnalysis/causalpath
 
-```{r, engine='bash'}
-java -jar ../java/causalpath-1.2.0_5fa16018.jar dataset
+```{r}
+javaJar <- system.file("java/causalpath-1.2.0_5fa16018.jar", package="rcausalpath")
+command <- paste0("java -jar ", javaJar, " dataset")
+command 
+
+# The exitCode should be 0 if successful
+exitCode <- system(command, intern = FALSE)
+exitCode
 ```
 
 # Result Visualization
@@ -74,7 +79,7 @@ head(sif)
 
 NOTE: highlightNodes can be used to "highlight" nodes of interest. 
 
-```{r, fig.width=10, fig.height=10}
+```{r, fig.width=12, fig.height=12}
 g <- loadCausalPathFormat(sif, "dataset/causative.format")
 plot(g, vertex.shape="none", vertex.label.cex=1.5, layout=layout.fruchterman.reingold, main="Causative Network")
 legend(x="topleft", legend=c("phosphorylation","dephosphorylation","upregulates expression","downregulates expression"), col=c("#006400","#640000","#006400","#640000"), lwd=1, lty=c(2,2,1,1))
@@ -89,7 +94,7 @@ head(sif)
 
 ### Visualize Network 
 
-```{r, fig.width=10, fig.height=10}
+```{r, fig.width=12, fig.height=12}
 g <- loadCausalPathFormat(sif, "dataset/conflicting.format")
 plot(g, vertex.shape="none", vertex.label.cex=1.5, layout=layout.fruchterman.reingold, main="Causative Network")
 legend(x="topleft", legend=c("phosphorylation","dephosphorylation","upregulates expression","downregulates expression"), col=c("#006400","#640000","#006400","#640000"), lwd=1, lty=c(2,2,1,1))
