@@ -96,7 +96,7 @@ head(sif)
 
 ```{r, fig.width=12, fig.height=12}
 g <- loadCausalPathFormat(sif, "dataset/conflicting.format")
-plot(g, vertex.shape="none", vertex.label.cex=1.5, layout=layout.fruchterman.reingold, main="Causative Network")
+plot(g, vertex.shape="none", vertex.label.cex=1.5, layout=layout.fruchterman.reingold, main="Conflicting Network")
 legend(x="topleft", legend=c("phosphorylation","dephosphorylation","upregulates expression","downregulates expression"), col=c("#006400","#640000","#006400","#640000"), lwd=1, lty=c(2,2,1,1))
 ```
 
